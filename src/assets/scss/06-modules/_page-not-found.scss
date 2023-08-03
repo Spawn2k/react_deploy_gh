@@ -1,0 +1,107 @@
+.m-page-not-found {
+  text-align: center;
+  background: linear-gradient(141deg, #0e172a 25%, #111c33 40%, #121d35 55%);
+
+  color: #555;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 32px;
+  padding-top: 40vh;
+  height: 100vh;
+  overflow: hidden;
+  // -webkit-backface-visibility: hidden;
+  // -webkit-perspective: 1000;
+  // -webkit-transform: translate3d(0, 0, 0);
+  p {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #5eead4;
+  }
+  .first-show-up {
+    animation: showup 5s forwards;
+  }
+  .second-show-up {
+    width: 0px;
+    animation: reveal 5s forwards;
+    span {
+      margin-left: -155px;
+      animation: slidein 5s forwards;
+    }
+  }
+  .link-homepage {
+    color: #5eead4;
+    display: block;
+
+    animation: showupLink 5s forwards;
+    svg {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@keyframes showupLink {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  20% {
+    margin-left: -800px;
+  }
+  35% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 175px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    width: 175px;
+  }
+}

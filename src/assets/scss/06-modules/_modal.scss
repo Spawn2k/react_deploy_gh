@@ -1,0 +1,64 @@
+.modal-backdrop {
+  animation: backDrop 0.3s;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+
+  backdrop-filter: blur(3px);
+  z-index: 1;
+  .modal-content-wrapper {
+    // position: fixed;
+    // width: 500px;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // z-index: 2;
+
+    img {
+      animation: textwelle 0.3s;
+      width: calc(14rem + 15vw);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+}
+
+@keyframes textwelle {
+  0% {
+    opacity: 0;
+    width: 0px;
+    margin-left: 0;
+    margin-top: 0;
+    height: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes backDrop {
+  0% {
+    backdrop-filter: blur(0);
+  }
+  100% {
+    backdrop-filter: blur(3px);
+  }
+}
+
+// .modal-content-wrapper
+//   position: fixed;
+//   // width: 300px;
+//   // height: 300px;
+//   background: white;
+//   margin: auto;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   padding: 50px;
+//

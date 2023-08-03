@@ -1,0 +1,46 @@
+.m-icon-wrapper {
+  fill: transparent;
+  stroke: transparent;
+  // stroke-width: 50;
+  cursor: pointer;
+  position: fixed;
+  bottom: 4rem;
+  right: 3rem;
+
+  svg {
+    position: relative;
+    overflow: visible;
+    width: 2rem;
+  }
+
+  path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 140;
+    transform-origin: center;
+  }
+
+  path {
+    animation: stroke-animation 6s ease-in-out forwards;
+  }
+}
+
+@keyframes stroke-animation {
+  0% {
+    stroke: $tag-font-color;
+    stroke-dashoffset: 140;
+  }
+  30% {
+    stroke-dashoffset: 0;
+    stroke: $tag-font-color;
+  }
+
+  95% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+    stroke: $tag-font-color;
+  }
+}

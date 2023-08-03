@@ -1,0 +1,49 @@
+$chat-box-font-messages: $font-family-code;
+
+// ==================================
+.m-chat-box {
+  padding: 1rem 0 3rem;
+  .display {
+    padding: 1rem;
+    height: 40vh;
+
+    margin: 0 0 1rem;
+    border-radius: 1rem;
+  }
+
+  .display > h3:first-child {
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user-counter {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: lighten($color-blue, 30%);
+  }
+
+  .chat-messages {
+    padding: 1rem;
+    height: calc(100% - 3rem);
+    background-color: #efefef;
+    font-family: $chat-box-font-messages;
+    overflow-y: scroll;
+    &:empty {
+      &::before {
+        content: 'no messages found';
+        color: #999;
+      }
+    }
+
+    .server-user {
+      color: rgb(255, 99, 71);
+    }
+    .other-user {
+      color: rgb(180, 164, 69);
+    }
+    .client-user {
+      color: rgb(70, 162, 70);
+    }
+  }
+}

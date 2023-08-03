@@ -1,0 +1,12 @@
+import { Link } from 'react-router-dom';
+import styles from './Logo.module.css';
+
+function Logo() {
+  return (
+    <Link to={'/word-wise'}>
+      <img src="../../assets/img/logo.png" alt="WorldWise logo" className={styles.logo} />
+    </Link>
+  );
+}
+4;
+export default Logo;

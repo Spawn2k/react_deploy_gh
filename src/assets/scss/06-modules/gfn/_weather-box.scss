@@ -1,0 +1,98 @@
+// Module: Weather-Box - get weather from OpenWeatherMap API
+
+.m-weather-box {
+  &.loaded {
+    // https://cssreference.io/property/animation-fill-mode/
+    animation-name: fadeWeatherBoxIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  opacity: 0;
+  font-family: $font-family-copy;
+  width: 40%;
+  max-width: 380px;
+
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fff;
+
+  display: flex;
+
+  .weather-pic {
+    width: 45%;
+    figure {
+      overflow: hidden;
+      img {
+        border-radius: 1rem;
+      }
+      img,
+      svg {
+        width: 100%;
+      }
+      figcaption {
+        text-align: center;
+      }
+
+      .description {
+        text-align: center;
+        color: #ccc;
+        line-height: 1.25;
+      }
+    }
+  }
+
+  .weather-information {
+    padding: 2rem 0 0;
+    width: 55%;
+    height: 100%;
+    .text-temp {
+      text-align: center;
+      font-size: 3.25rem;
+      color: #555;
+      margin: 0 0 0rem;
+    }
+    .temp-unit {
+      font-size: 2.5rem;
+      color: lighten(#555, 20%);
+    }
+
+    .text-temp-min-max {
+      color: #ccc;
+      text-align: center;
+      line-height: 1;
+      margin: 0 0 2rem;
+    }
+
+    .wind-direction {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #555;
+      .fa-compass {
+        transition: all 0.4s ease-out;
+        font-size: 48px;
+        height: 48px;
+        width: 48px;
+        margin-right: 1rem;
+      }
+      .text-wind-info {
+        margin: 0;
+      }
+      .speed {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes fadeWeatherBoxIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

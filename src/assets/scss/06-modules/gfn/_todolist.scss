@@ -1,0 +1,99 @@
+.m-todolist {
+  .list-todos {
+    margin: 1rem 0;
+    li {
+      &::before {
+        position: absolute;
+        margin: 0 0 0 -3rem;
+        content: '\f46c';
+        font-size: 1.5rem;
+        font-weight: 900;
+        font-family: 'Font Awesome 6 Free';
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .todo-content {
+        display: flex;
+
+        input[type='checkbox']:checked + label {
+          text-decoration: line-through;
+        }
+
+        label {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+
+  .button {
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    transform: scale(1);
+    transition: background-color, transform 0.4s ease-out;
+  }
+
+  .button-delete {
+    visibility: hidden;
+    width: 1.5rem;
+    position: relative;
+    padding: 0;
+    margin: 0 0 0.5rem;
+    color: #555;
+
+    &:hover,
+    &:focus {
+      color: #c00;
+    }
+
+    &::before {
+      content: '\f057';
+      position: absolute;
+      visibility: visible;
+      display: inline-block;
+      font-family: 'Font Awesome 6 Free';
+      font-size: 1.5rem;
+      line-height: 1.5;
+
+      height: 100%;
+    }
+  }
+
+  .button-add {
+    background-color: $color-3;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      background-color: darken($color-3, 20%);
+    }
+  }
+
+  .button-save {
+    background-color: #000;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      background-color: darken(#000, 20%);
+    }
+  }
+
+  .button-clean {
+    background-color: $color-2;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      background-color: darken($color-2, 20%);
+    }
+  }
+}

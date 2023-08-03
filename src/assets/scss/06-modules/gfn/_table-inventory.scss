@@ -1,0 +1,23 @@
+.m-table-inventory {
+  tr {
+    vertical-align: middle;
+    td {
+      > div {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  tbody {
+    tr:last-child {
+      td:last-child {
+        border-bottom: 1px solid #333;
+      }
+    }
+  }
+  tfoot tr {
+    td:last-child {
+      font-weight: 900;
+    }
+  }
+}

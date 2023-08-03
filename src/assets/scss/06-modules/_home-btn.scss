@@ -1,0 +1,93 @@
+.m-home-btn {
+  position: fixed;
+  bottom: 4rem;
+  left: -4.2rem;
+  width: 5rem;
+  padding: 0.4rem;
+  transition: all 0.3s;
+  fill: transparent;
+  z-index: 1000;
+  // stroke: tomato;
+
+  svg {
+    stroke-width: 2;
+    position: relative;
+    overflow: visible;
+    width: 2rem;
+    transition: all 0.3s;
+    transform: translateX(-3.5rem);
+  }
+
+  &:hover {
+    animation: home-btn 0.3s forwards;
+
+    svg {
+      animation: svg 0.3s forwards;
+    }
+  }
+}
+
+@keyframes home-btn {
+  0% {
+  }
+  100% {
+    background-color: transparent;
+    left: 0rem;
+  }
+}
+
+@keyframes svg {
+  0% {
+  }
+  100% {
+    // color: $tag-font-color;
+    font-size: 2rem;
+    transform: translateX(1.3rem);
+  }
+}
+// .m-home-btn {
+//   position: fixed;
+//   bottom: 4rem;
+//   right: -4.2rem;
+//   width: 5rem;
+//   padding: 0.4rem;
+//   transition: all 0.3s;
+//   fill: transparent;
+//   z-index: 1000;
+//   // stroke: tomato;
+
+//   svg {
+//     position: relative;
+//     overflow: visible;
+//     width: 2rem;
+//     transition: all 0.3s;
+//     transform: translateX(3.5rem);
+//   }
+
+//   &:hover {
+//     animation: home-btn 0.3s forwards;
+
+//     svg {
+//       animation: svg 0.3s forwards;
+//     }
+//   }
+// }
+
+// @keyframes home-btn {
+//   0% {
+//   }
+//   100% {
+//     background-color: transparent;
+//     right: 0rem;
+//   }
+// }
+
+// @keyframes svg {
+//   0% {
+//   }
+//   100% {
+//     // color: $tag-font-color;
+//     font-size: 2rem;
+//     transform: translateX(0.5rem);
+//   }
+// }

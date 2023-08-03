@@ -1,0 +1,12 @@
+.m-input-article-number {
+  display: inline-block;
+  margin: 0 0.5rem 0 0;
+  cursor: pointer;
+  .article-number {
+    display: inline-block;
+    padding: 8px 0 0 14px;
+  }
+  input {
+    width: 4.8rem;
+  }
+}

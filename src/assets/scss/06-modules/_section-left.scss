@@ -1,0 +1,28 @@
+.section-left {
+  // position: relative;
+  // top: 0rem;
+  width: 50vw;
+  color: $font-color;
+  .m-header {
+    position: fixed;
+    top: 6.5rem;
+    width: 22vw;
+    h1 {
+      color: $headline-color;
+      font-size: 3.5rem;
+      font-weight: 600;
+      font-family: Rokkitt;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      color: $headline-color;
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      font-family: Rokkitt;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 5rem;
+    }
+  }
+}

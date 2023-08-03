@@ -1,0 +1,16 @@
+{
+  "cities": [
+    {
+      "cityName": "Hildesheim",
+      "country": "Germany",
+      "date": "2023-07-18T12:14:18.005Z",
+      "notes": "",
+      "emoji": "🇩🇪",
+      "position": {
+        "lat": "52.15455702760558",
+        "lng": "9.957733154296877"
+      },
+      "id": 1
+    }
+  ]
+}
