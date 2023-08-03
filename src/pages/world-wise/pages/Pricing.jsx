@@ -18,7 +18,7 @@ export default function Product() {
             provident, laboriosam fugit voluptatem iste.
           </p>
         </div>
-        <img src="../assets/img/img-2.jpg" alt="overview of a large city with skyscrapers" />
+        <img src="../react_deploy_gh/assets/img/img-2.jpg" alt="overview of a large city with skyscrapers" />
       </section>
     </main>
   );

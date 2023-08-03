@@ -6,7 +6,7 @@ export default function Product() {
     <main className={styles.product}>
       <PageNav />
       <section>
-        <img src="../assets/img/img-1.jpg" alt="person with dog overlooking mountain with sunset" />
+        <img src="../react_deploy_gh/assets/img/img-1.jpg" alt="person with dog overlooking mountain with sunset" />
         <div>
           <h2>About WorldWide.</h2>
           <p>

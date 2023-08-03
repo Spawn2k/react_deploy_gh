@@ -1,7 +1,8 @@
 .homepage {
   height: 100vh;
 
-  background-image: linear-gradient(rgba(36, 42, 46, 0.8), rgba(36, 42, 46, 0.8)), url('../../assets/img/bg.jpg');
+  background-image: linear-gradient(rgba(36, 42, 46, 0.8), rgba(36, 42, 46, 0.8)),
+    url('../../react_deploy_gh/assets/img/bg.jpg');
   background-size: cover;
   background-position: center;
   padding: 1.5rem 3rem;

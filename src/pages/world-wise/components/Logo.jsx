@@ -4,7 +4,7 @@ import styles from './Logo.module.css';
 function Logo() {
   return (
     <Link to={'/word-wise'}>
-      <img src="../../assets/img/logo.png" alt="WorldWise logo" className={styles.logo} />
+      <img src="../../react_deploy_gh/assets/img/logo.png" alt="WorldWise logo" className={styles.logo} />
     </Link>
   );
 }
