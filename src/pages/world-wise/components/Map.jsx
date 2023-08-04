@@ -7,7 +7,8 @@ import { useCities } from '../contexts/CitiesContext';
 import useGeoLocation from '../hooks/useGeoLocation';
 import { useUrlPosition } from '../hooks/useUrlPosition';
 import HomeBtn from '../../home-page/components/HomeBtn';
-
+import markerIconPng from 'leaflet/dist/images/marker-icon.png';
+import { Icon } from 'leaflet';
 const Map = (props) => {
   // const {} = props;
   const { cities } = useCities();
@@ -36,7 +37,11 @@ const Map = (props) => {
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
         {cities.map((city) => (
-          <Marker key={city.id} position={[city.position.lat, city.position.lng]}>
+          <Marker
+            icon={new Icon({ iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41] })}
+            key={city.id}
+            position={[city.position.lat, city.position.lng]}
+          >
             <Popup>
               <span>{city.emoji}</span>
               <span>{city.cityName}</span>

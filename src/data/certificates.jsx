@@ -43,7 +43,7 @@ const certificates = [
         </svg>
       </>
     ),
-    image: 'react_deploy_gh/assets/img/webdesign-small.jpg',
+    image: '/react_deploy_gh/assets/img/webdesign-small.jpg',
   },
   {
     name: 'JavaScript',
@@ -85,7 +85,7 @@ const certificates = [
         </svg>
       </>
     ),
-    image: 'react_deploy_gh/assets/img/js-small.jpg',
+    image: '/react_deploy_gh/assets/img/js-small.jpg',
   },
   {
     name: 'PHP',
@@ -130,7 +130,7 @@ const certificates = [
         </svg>
       </>
     ),
-    image: 'react_deploy_gh/assets/img/php-small.jpg',
+    image: '/react_deploy_gh/assets/img/php-small.jpg',
   },
 ];
 

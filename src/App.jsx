@@ -1,6 +1,6 @@
 import './assets/scss/main.scss';
 
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom';
 import ReactQuiz from './pages/react-quiz/ReactQuiz';
 import { MoviesProvider } from './pages/use-popcorn/context/MovieReducer';
 import { QuizProvider } from './pages/react-quiz/context/QuizContext';
@@ -34,7 +34,7 @@ const Pricing = lazy(() => import('./pages/world-wise/pages/Pricing'));
 const Product = lazy(() => import('./pages/world-wise/pages/Product'));
 const HomePage = lazy(() => import('./pages/home-page/HomePage'));
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: '*',
