@@ -94,7 +94,11 @@ const HomePage = (props) => {
   }, [mediaQuery]);
 
   useEffect(() => {
+    const pageIcon = document.querySelector('link[rel~="icon"]');
+    pageIcon.href = 'assets/icon/react.svg';
+
     document.title = 'Homepage';
+    document.title.ic;
     return () => {
       document.title = '';
     };

@@ -10,7 +10,7 @@ const Todo = (props) => {
   // const {} = props;
   const [notes, setNotes] = useState([]);
 
-  const { getTitle } = useTitle();
+  const { getTitle } = useTitle('assets/icon/todo.svg');
   useEffect(() => {
     document.title = getTitle;
     return () => {

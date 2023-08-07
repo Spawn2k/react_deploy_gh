@@ -12,7 +12,7 @@ const ReactPizza = (props) => {
   // const {} = props;
   const navigation = useNavigation();
 
-  const { getTitle } = useTitle();
+  const { getTitle } = useTitle('assets/icon/pizza.svg');
   useEffect(() => {
     document.title = getTitle;
     return () => {

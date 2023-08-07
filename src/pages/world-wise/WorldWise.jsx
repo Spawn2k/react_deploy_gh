@@ -29,7 +29,7 @@ const AppLayout = lazy(() => import('./pages/AppLayout'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 
 function WorldWise() {
-  const { getTitle } = useTitle();
+  const { getTitle } = useTitle('assets/icon/worldWise.svg');
   useEffect(() => {
     document.title = getTitle;
     return () => {

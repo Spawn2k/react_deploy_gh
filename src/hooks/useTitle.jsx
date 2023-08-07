@@ -1,10 +1,13 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-const useTitle = (props) => {
-  // const {} = props;
-
+const useTitle = (icon) => {
+  // const {} = icon;
   const location = useLocation();
+
+  const pageIcon = document.querySelector('link[rel~="icon"]');
+  pageIcon.href = icon;
+
   const getTitle = location.pathname
     .split('/')[1]
     .replace('/', '')

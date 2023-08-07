@@ -57,7 +57,7 @@ const UsePopcorn = (props) => {
     isLoadingMovieDetails,
     error,
   } = useMovies();
-  const { getTitle } = useTitle();
+  const { getTitle } = useTitle('assets/icon/popCorn.svg');
 
   useEffect(() => {
     document.title = getTitle;

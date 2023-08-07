@@ -15,7 +15,7 @@ import { useTitle } from '../../hooks/useTitle';
 
 function App() {
   const { status, isLoading, hasAnswerd, dispatch } = useQuiz();
-  const { getTitle } = useTitle();
+  const { getTitle } = useTitle('assets/icon/quiz.svg');
 
   useEffect(() => {
     document.title = getTitle;
