@@ -89,8 +89,6 @@ const initialState = {
   error: '',
 };
 
-const tempQuery = `http://www.omdbapi.com/?apikey=${KEY}&s=Wick`;
-
 const MoviesProvider = (props) => {
   const { children } = props;
   const [state, dispatch] = useReducer(reducer, initialState);

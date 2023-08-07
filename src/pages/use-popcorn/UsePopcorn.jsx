@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Main from './components/Main';
 import Nav from './components/Nav';
@@ -11,6 +11,7 @@ import ListContent from './components/ListContent';
 import Summary from './components/Summary';
 import MovieInfo from './components/MovieInfo';
 import HomeBtn from '../home-page/components/HomeBtn';
+import { useTitle } from '../../hooks/useTitle';
 
 const btnPlusSvg = (
   <svg
@@ -56,6 +57,15 @@ const UsePopcorn = (props) => {
     isLoadingMovieDetails,
     error,
   } = useMovies();
+  const { getTitle } = useTitle();
+
+  useEffect(() => {
+    document.title = getTitle;
+    return () => {
+      document.title = '';
+    };
+  }, [getTitle]);
+
   return (
     <div className="m-use-popcorn-wraper">
       <Nav />

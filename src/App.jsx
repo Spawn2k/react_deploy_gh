@@ -34,147 +34,142 @@ const Pricing = lazy(() => import('./pages/world-wise/pages/Pricing'));
 const Product = lazy(() => import('./pages/world-wise/pages/Product'));
 const HomePage = lazy(() => import('./pages/home-page/HomePage'));
 
-const router = createHashRouter(
-  [
-    {
-      path: '*',
-      element: <PageNotFound />,
-    },
-    {
-      path: '',
-      element: (
-        <Suspense fallback={<LoadingSpinner bgColor="#0e172a" borderColor="#5eead4" />}>
-          <HomePage />
-        </Suspense>
-      ),
-    },
-    {
-      path: 'todo-list',
-      element: (
-        <Suspense fallback={<LoadingSpinner bgColor="#212529" borderColor="#f5ba13" />}>
-          <Todo />
-        </Suspense>
-      ),
-    },
-    {
-      path: 'use-popcorn',
-      element: (
-        <MoviesProvider>
-          <Suspense fallback={<LoadingSpinner bgColor="#212529" borderColor="#6741d9" />}>
-            <UsePopcorn />
-          </Suspense>
-        </MoviesProvider>
-      ),
-    },
-    {
-      path: 'react-quiz',
-      element: (
-        <QuizProvider>
-          <ReactQuiz />
-        </QuizProvider>
-      ),
-    },
-    {
-      path: 'react-pizza',
-      element: (
-        <Provider store={store}>
-          <Suspense fallback={<LoadingSpinner bgColor="#FFFFFF" borderColor="#FACC15" />}>
-            <ReactPizza />
-          </Suspense>
-        </Provider>
-      ),
-      children: [
-        {
-          index: true,
-          element: <Home />,
-        },
-        {
-          path: 'menu',
-          element: <Menu />,
-          errorElement: <Error />,
-          loader: menuLoader,
-        },
-        {
-          path: 'cart',
-          element: <Cart />,
-        },
-        {
-          path: 'order/new',
-          element: <CreateOrder />,
-          errorElement: <Error />,
-          action: createOrderAction,
-        },
-        {
-          path: 'order/:orderId',
-          element: <Order />,
-          errorElement: <Error />,
-          action: updateOrderAction,
-          loader: orderIdLoader,
-        },
-      ],
-    },
-    {
-      path: 'word-wise',
-      element: (
-        <Suspense fallback={<LoadingSpinner bgColor="#2d3439" borderColor="#00c46a" />}>
-          <WorldWise />
-        </Suspense>
-      ),
-      children: [
-        {
-          path: 'app',
-          element: (
-            <ProtectedRoutes>
-              <AppLayout />
-            </ProtectedRoutes>
-          ),
-          children: [
-            {
-              path: 'cities',
-              element: <CityList />,
-            },
-            {
-              path: 'countries',
-              element: <CountryList />,
-            },
-            {
-              path: 'cities/:id',
-              element: <City />,
-            },
-            {
-              path: 'form',
-              element: <Form />,
-            },
-          ],
-        },
-        {
-          index: true,
-          element: <HomepageWorldWise />,
-        },
-        {
-          path: 'login',
-          element: <Login />,
-        },
-        {
-          path: 'pricing',
-          element: <Pricing />,
-        },
-        {
-          path: 'product',
-          element: <Product />,
-        },
-      ],
-    },
-
-    {
-      path: 'sandbox',
-      element: <Sandbox />,
-    },
-  ],
+const router = createHashRouter([
   {
-    basename: '/react_deploy_gh',
-  }
-);
+    path: '*',
+    element: <PageNotFound />,
+  },
+  {
+    path: '',
+    element: (
+      <Suspense fallback={<LoadingSpinner bgColor="#0e172a" borderColor="#5eead4" />}>
+        <HomePage />
+      </Suspense>
+    ),
+  },
+  {
+    path: 'todo-list',
+    element: (
+      <Suspense fallback={<LoadingSpinner bgColor="#eee" borderColor="#f5ba13" />}>
+        <Todo />
+      </Suspense>
+    ),
+  },
+  {
+    path: 'use-popcorn',
+    element: (
+      <MoviesProvider>
+        <Suspense fallback={<LoadingSpinner bgColor="#212529" borderColor="#6741d9" />}>
+          <UsePopcorn />
+        </Suspense>
+      </MoviesProvider>
+    ),
+  },
+  {
+    path: 'react-quiz',
+    element: (
+      <QuizProvider>
+        <ReactQuiz />
+      </QuizProvider>
+    ),
+  },
+  {
+    path: 'react-pizza',
+    element: (
+      <Provider store={store}>
+        <Suspense fallback={<LoadingSpinner bgColor="#FFFFFF" borderColor="#FACC15" />}>
+          <ReactPizza />
+        </Suspense>
+      </Provider>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: 'menu',
+        element: <Menu />,
+        errorElement: <Error />,
+        loader: menuLoader,
+      },
+      {
+        path: 'cart',
+        element: <Cart />,
+      },
+      {
+        path: 'order/new',
+        element: <CreateOrder />,
+        errorElement: <Error />,
+        action: createOrderAction,
+      },
+      {
+        path: 'order/:orderId',
+        element: <Order />,
+        errorElement: <Error />,
+        action: updateOrderAction,
+        loader: orderIdLoader,
+      },
+    ],
+  },
+  {
+    path: 'word-wise',
+    element: (
+      <Suspense fallback={<LoadingSpinner bgColor="#2d3439" borderColor="#00c46a" />}>
+        <WorldWise />
+      </Suspense>
+    ),
+    children: [
+      {
+        path: 'app',
+        element: (
+          <ProtectedRoutes>
+            <AppLayout />
+          </ProtectedRoutes>
+        ),
+        children: [
+          {
+            path: 'cities',
+            element: <CityList />,
+          },
+          {
+            path: 'countries',
+            element: <CountryList />,
+          },
+          {
+            path: 'cities/:id',
+            element: <City />,
+          },
+          {
+            path: 'form',
+            element: <Form />,
+          },
+        ],
+      },
+      {
+        index: true,
+        element: <HomepageWorldWise />,
+      },
+      {
+        path: 'login',
+        element: <Login />,
+      },
+      {
+        path: 'pricing',
+        element: <Pricing />,
+      },
+      {
+        path: 'product',
+        element: <Product />,
+      },
+    ],
+  },
+
+  {
+    path: 'sandbox',
+    element: <Sandbox />,
+  },
+]);
 
 function App() {
   return (

@@ -1,9 +1,7 @@
 import { useQuiz } from './context/QuizContext';
-
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
-// import Loader from './components/Loader';
 import StartScreen from './components/StartScreen';
 import Progress from './components/Progress';
 import Question from './components/Question';
@@ -12,19 +10,21 @@ import Timer from './components/Timer';
 import NextButton from './components/NextButton';
 import FinishScreen from './components/FinishScreen';
 import HomeBtn from '../home-page/components/HomeBtn';
-import LoadingSpinner from '../../components/LoadingSpinner';
 import Loader from '../../components/Loader';
+import { useTitle } from '../../hooks/useTitle';
 
 function App() {
   const { status, isLoading, hasAnswerd, dispatch } = useQuiz();
+  const { getTitle } = useTitle();
 
   useEffect(() => {
-    // const fetchQuestions = async () => {
-    //   dispatch({ type: 'quiz/loading', payload: true });
-    //   const res = await fetch('http://localhost:8000/questions');
-    //   const data = await res.json();
-    //   return data;
-    // };
+    document.title = getTitle;
+    return () => {
+      document.title = '';
+    };
+  }, [getTitle]);
+
+  useEffect(() => {
     const fetchQuestions = async () => {
       dispatch({ type: 'quiz/loading', payload: true });
       const res = await fetch(`https://api.jsonbin.io/v3/b/64c62de99d312622a388e0a2`, {

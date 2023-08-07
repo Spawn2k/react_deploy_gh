@@ -8,6 +8,7 @@ import Card from './components/Card';
 import HomeBtn from './components/HomeBtn';
 import OnScrollHome from './components/OnScrollHome';
 import projekts from '../../data/projekts';
+import { useTitle } from '../../hooks/useTitle';
 
 const HomePage = (props) => {
   // const {} = props;
@@ -91,6 +92,13 @@ const HomePage = (props) => {
       mql.removeEventListener('change', onChange);
     };
   }, [mediaQuery]);
+
+  useEffect(() => {
+    document.title = 'Homepage';
+    return () => {
+      document.title = '';
+    };
+  }, []);
 
   return (
     <div className="homepage">

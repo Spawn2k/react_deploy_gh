@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Outlet, Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import 'leaflet/dist/leaflet.css';
 
 import { CitiesProvider } from './contexts/CitiesContext';
@@ -12,6 +12,7 @@ import City from './components/City';
 import Form from './components/Form';
 import SpinnerFullPage from './components/SpinnerFullPage';
 import HomeBtn from '../home-page/components/HomeBtn';
+import { useTitle } from '../../hooks/useTitle';
 
 // import Homepage from './pages/Homepage';
 // import Product from './pages/Product';
@@ -28,6 +29,13 @@ const AppLayout = lazy(() => import('./pages/AppLayout'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 
 function WorldWise() {
+  const { getTitle } = useTitle();
+  useEffect(() => {
+    document.title = getTitle;
+    return () => {
+      document.title = '';
+    };
+  }, [getTitle]);
   return (
     <>
       <CitiesProvider>
