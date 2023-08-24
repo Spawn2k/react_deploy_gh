@@ -10,6 +10,7 @@ const containerStyle = {
 const starContainerStyle = {
   display: 'flex',
   alignItems: 'center',
+  marginBottom: '0.5rem',
 };
 
 StarRatingStatic.propTypes = {

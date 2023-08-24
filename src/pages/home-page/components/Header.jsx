@@ -9,7 +9,7 @@ const Header = (props) => {
       <h1>Nguyen Duy Tuan</h1>
       <h3>Junior Developer</h3>
       <p className="headline-info">
-        Ein frischer Junior Developer der seine Leidenschaft fürs programmieren entdeckt.
+        Ein frischer Junior Developer der seine Leidenschaft fürs programmieren entdeckt hat.
         {/* Mein motte das mich antreibt.
         "Jede Leistung fängt mit der Entscheidung an, es zu versuchen." */}
       </p>
