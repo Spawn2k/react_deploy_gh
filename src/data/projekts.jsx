@@ -3,6 +3,7 @@ const projekts = [
     title: 'Todo - List',
     link: 'todo-list',
     level: 1,
+    react: true,
     description: 'Einfaches Todo App um React kenne zu lernen. Hautpziel useState zu verstehen und anzuwenden',
     icon: (
       <svg
@@ -37,6 +38,7 @@ const projekts = [
     title: 'usePopcorn',
     link: 'use-popcorn',
     level: 3,
+    react: true,
     description:
       'Schlichtes Movie Db App mit bewertungsfunktion. Die erste Version nur mit useEffect mit fetch, async, await, AbortController und useState umgesetzt. Mit guter planung vermeidet man Prop drilling. Die aktuelle Version wurde anstatt mit useState Hauptsächlich mit useReducer umgesetzt deutlich übersichler da die funktionslogik zentrall verwaltet wird.',
     icon: (
@@ -77,6 +79,7 @@ const projekts = [
     title: 'React - Quiz',
     link: 'react-quiz',
     level: 3,
+    react: true,
     description:
       'Kleines React Quiz App. Wieder mit useState umgesetzt, der schwierege part war die logik aufzubauen für die evaluieren der Antwort. Aktuelle Version mit useReducer, mit timer funktion und useEffect async await fetch als externe Quelle wurde JSONBin.io genutz',
     icon: (
@@ -116,6 +119,7 @@ const projekts = [
     title: 'Word - Wise',
     link: 'word-wise',
     level: 3,
+    react: true,
     description:
       'Reise tracker App. Mann kann sich eintragen wo man schon mal alles Urlaub gemacht hat. Diesmal gleich mit useReducer,useEffect, useState und React Router (BrowserRouter) umgesetzt. React Leaflet wird als map verwendet und json quelle dient wieder JSONBin.io. Aktueller Standort und schlichtes authentifizierung wurden integriert. Aktuelle Version wurden die Routen mit createBrowserRouter umgesetzt',
     icon: (
@@ -167,6 +171,7 @@ const projekts = [
     title: 'Pizza',
     link: 'react-pizza',
     level: 4,
+    react: true,
     description:
       'Bestell Lieferservice App. Statemanagement wurde mit Redux umgesetzt, send/request wurden mit createBrowserRouter mit der Loader/Action funktion umgesetzt anstatt mit useEffect',
     date: '07 - 2023',
@@ -218,6 +223,7 @@ const projekts = [
     title: 'Fitness',
     link: 'https://spawn2k.github.io/gh-fitness/',
     level: 5,
+    react: false,
     date: '08 - 2023',
     description: 'Fitness Website mit on scroll reveal,Parallax effect, Svg draw on scroll. Der schwierige part war die logik, path im synch zu halten da path länge nicht linear verläuft. Leider noch keine Ahnung wie svg responsive zu machen 😢. Problem ist sobald viewport verkleinert wird muss an verschiedenen stellen path länge verändert werden.',
     icon: (<svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20.2739 9.86883L16.8325 4.95392L18.4708 3.80676L21.9122 8.72167L20.2739 9.86883Z" fill="currentColor"></path><path d="M18.3901 12.4086L16.6694 9.95121L8.47783 15.687L10.1985 18.1444L8.56023 19.2916L3.97162 12.7383L5.60992 11.5912L7.33068 14.0487L15.5222 8.31291L13.8015 5.8554L15.4398 4.70825L20.0284 11.2615L18.3901 12.4086Z" fill="currentColor"></path><path d="M20.7651 7.08331L22.4034 5.93616L21.2562 4.29785L19.6179 5.445L20.7651 7.08331Z" fill="currentColor"></path><path d="M7.16753 19.046L3.72607 14.131L2.08777 15.2782L5.52923 20.1931L7.16753 19.046Z" fill="currentColor"></path><path d="M4.38208 18.5549L2.74377 19.702L1.59662 18.0637L3.23492 16.9166L4.38208 18.5549Z" fill="currentColor"></path></svg>),

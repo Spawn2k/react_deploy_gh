@@ -5,7 +5,7 @@ import StarRatingStatic from '../../../components/StarRatingStatic';
 
 const Card = (props) => {
   const {
-    projekt: { title, level, description, date, tags, link, icon },
+    projekt: { title, level, description, date, tags, link, icon , react},
   } = props;
 
   return (
@@ -15,7 +15,7 @@ const Card = (props) => {
           <p>{date}</p>
         </div>
         <div className="info">
-          <Link to={link}>
+        {react?  <Link to={link}>
             <h3>
               <span>{title}</span>
               <span className="card-icon">{icon}</span>
@@ -24,7 +24,14 @@ const Card = (props) => {
               <StarRatingStatic defaultRating={level} size={17} color="#5eead4" />
             </div>
             <p>{description}</p>
-          </Link>
+          </Link> : <a href={link}> <h3>
+              <span>{title}</span>
+              <span className="card-icon">{icon}</span>
+            </h3>
+            <div>
+              <StarRatingStatic defaultRating={level} size={17} color="#5eead4" />
+            </div>
+            <p>{description}</p></a>}
           <div className="tag-container">
             {tags.map((tag, idx) => (
               <Tag key={idx} tag={tag} />
