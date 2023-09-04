@@ -273,7 +273,7 @@ const projekts = [
     level: 3,
     react: false,
     date: '09 - 2023',
-    description: 'Tab functionalität mit video function',
+    description: 'Tab functionalität mit video function. Der schwierige part war die anpassung des hintergrund and die größe des inhalts.',
     icon: (<svg height="1em" width="1em" viewBox="-2.5 0 18 18">
         <g id="Page-1" stroke="currentColor" strokeWidth="1" fill="currentColor" fillRule="evenodd">
         <g id="Dribbble-Light-Preview" transform="translate(-343.000000, -760.000000)" fill="#000000">
