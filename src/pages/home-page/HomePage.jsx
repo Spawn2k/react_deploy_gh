@@ -10,6 +10,10 @@ import OnScrollHome from './components/OnScrollHome';
 import projekts from '../../data/projekts';
 import { useTitle } from '../../hooks/useTitle';
 
+
+
+
+
 const HomePage = (props) => {
   // const {} = props;
   const [showModal, setShowModal] = useState(false);
