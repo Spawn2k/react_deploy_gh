@@ -36,19 +36,80 @@
 } */
 
 .deleteBtn {
-  height: 1.9rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--color-dark--1);
+  /* height: 1.9rem; */
+  /* aspect-ratio: 1;
+  border-radius: 50%; */
+  /* border: none; */
+  /* background-color: var(--color-dark--1);
   color: var(--color-light--2);
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: 200; */
   cursor: pointer;
   transition: all 0.2s;
+  flex-grow: 1;
 }
 
-.deleteBtn:hover {
+.deleteBtn span {
+  display: inline-block;
+  /* width: 40px; */
+  padding: 15px 15px;
+  border: none;
+  background-color: var(--color-dark--1);
+  border-radius: 50%; 
+  position: relative;
+}
+
+.deleteBtn span::after{
+  content: 'X';
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.deleteBtn span:hover {
   background-color: var(--color-brand--1);
   color: var(--color-dark--1);
+}
+
+
+@media (max-width: 1300px) {
+  .cityItem {
+   flex-wrap: wrap;
+
+
+  }
+  .cityItem > span {
+    flex-basis: 40%;
+  }
+  h3{
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+
+
+
+  .cityItem > span {
+    flex-basis: initial;
+  }
+
+  .cityItem > h3 {
+    flex-basis: initial;
+    margin: 0;
+
+  } 
+  .cityItem > button {
+    flex-basis: initial;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  .cityItem > button span{
+    padding: 10px 10px;
+    font-size: 1rem;
+  } 
 }

@@ -29,3 +29,17 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+
+@media (max-width: 1140px) {
+
+  .login {
+    padding: 1.5rem 2.5rem
+  }
+}
+
+@media (max-width: 670px) {
+  .form {
+    width: 70vw;
+  }
+}

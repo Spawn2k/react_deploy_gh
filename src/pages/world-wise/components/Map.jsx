@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Map.module.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from 'react-leaflet';
@@ -11,6 +11,7 @@ import markerIconPng from 'leaflet/dist/images/marker-icon.png';
 import { Icon } from 'leaflet';
 const Map = (props) => {
   // const {} = props;
+  const [zoom, setZoom] = useState();
   const { cities } = useCities();
   const { getPosition, isLoading, position, setPosition } = useGeoLocation();
   const defaultPosition = position.length > 0 ? position : [52.143602398455315, 10.025024414062502];
@@ -23,6 +24,22 @@ const Map = (props) => {
     return () => {};
   }, [lat, lng, setPosition]);
 
+  useEffect(() => {
+
+    const onRezie = (e) => {
+      const media = window.matchMedia("screen and (max-width:800px)");
+      if(media.matches) {
+        setZoom(false)
+      } else {
+        setZoom(true)
+      }
+      
+    }
+    window.addEventListener('resize', onRezie)
+  }, [zoom])
+
+  console.log(zoom)
+
   return (
     <div className={styles.mapContainer}>
       {position.length < 1 && (
@@ -31,7 +48,7 @@ const Map = (props) => {
         </Button>
       )}
 
-      <MapContainer className={styles.map} center={defaultPosition} zoom={6} scrollWheelZoom={true}>
+      <MapContainer key={zoom} className={styles.map} center={defaultPosition} zoom={6} scrollWheelZoom={zoom}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"

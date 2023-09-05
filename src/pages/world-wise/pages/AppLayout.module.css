@@ -5,3 +5,12 @@
   display: flex;
   position: relative;
 }
+
+
+@media (max-width: 800px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}

@@ -40,7 +40,7 @@ const CityItem = (props) => {
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>({formatDate(date)})</time>
         <button onClick={handleClick} className={styles.deleteBtn}>
-          &times;
+         <span></span>
         </button>
       </Link>
     </li>

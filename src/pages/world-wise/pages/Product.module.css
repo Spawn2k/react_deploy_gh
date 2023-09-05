@@ -32,3 +32,19 @@
 .product section a {
   margin-top: 2rem;
 }
+
+@media (max-width: 1140px) {
+  .product section{
+    /* margin: 0 auto; */
+    width: 100%;
+  }
+  .product {
+    padding: 1.5rem 2.5rem
+  }
+}
+
+@media (max-width: 670px) {
+  .product section {
+    grid-template-columns: 1fr;
+  }
+}

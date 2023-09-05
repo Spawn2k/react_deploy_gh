@@ -32,3 +32,15 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .user {
+    top: 6.5rem;
+    right: initial;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #2D3439;
+    border: none;
+    box-shadow: none;
+  }
+}
