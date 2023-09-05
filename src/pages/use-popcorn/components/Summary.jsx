@@ -26,7 +26,7 @@ const Summary = (props) => {
         </p>
         <p>
           <span>⏳</span>
-          <span>{avgRuntime.toFixed(2)}min</span>
+          <span>{avgRuntime.toFixed(2)} min</span>
         </p>
       </div>
     </div>

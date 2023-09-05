@@ -5,11 +5,15 @@ const containerStyle = {
   display: 'flex',
   alignItems: 'center',
   gap: '16px',
-  marginLeft: '2.5rem',
+  marginRight: '30px',
+  justifyContent: 'center',
+  position: 'relative'
 };
 
 const starContainerStyle = {
   display: 'flex',
+  position: 'relative'
+
 };
 
 StarRating.propTypes = {
@@ -44,6 +48,10 @@ export default function StarRating({
     margin: '0',
     color,
     fontSize: `${size / 1.5}px`,
+    position: 'absolute',
+    right: '-30px',
+    top: '50%',
+    transform: 'translate(-50%, -50%)'
   };
 
   return (
@@ -60,12 +68,12 @@ export default function StarRating({
             size={size}
           />
         ))}
-      </div>
       <p style={textStyle}>
         {messages.length === maxRating
           ? messages[tempRating ? tempRating - 1 : rating - 1]
           : tempRating || rating || ''}
       </p>
+      </div>
     </div>
   );
 }
