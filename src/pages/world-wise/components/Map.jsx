@@ -11,7 +11,7 @@ import markerIconPng from 'leaflet/dist/images/marker-icon.png';
 import { Icon } from 'leaflet';
 const Map = (props) => {
   // const {} = props;
-  const [zoom, setZoom] = useState();
+  const [zoom, setZoom] = useState(true);
   const { cities } = useCities();
   const { getPosition, isLoading, position, setPosition } = useGeoLocation();
   const defaultPosition = position.length > 0 ? position : [52.143602398455315, 10.025024414062502];
@@ -25,6 +25,10 @@ const Map = (props) => {
   }, [lat, lng, setPosition]);
 
   useEffect(() => {
+    const media = window.matchMedia("screen and (max-width:800px)");
+    if(media.matches) {
+      setZoom(false)
+    }
 
     const onRezie = (e) => {
       const media = window.matchMedia("screen and (max-width:800px)");
