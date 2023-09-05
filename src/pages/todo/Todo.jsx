@@ -26,10 +26,14 @@ const Todo = (props) => {
     <>
       <main className="m-todo-main">
         <Header />
+
         <CreateArea setNotes={setNotes} />
+        <div className="sec-notes">
         {notes.map((note, idx) => (
+
           <Note key={idx} note={note} upHandleDelete={handleDelete} />
         ))}
+        </div>
       </main>
       <Footer />
       <HomeBtn color={'#f5ba13'} />

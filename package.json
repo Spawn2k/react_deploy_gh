@@ -9,6 +9,7 @@
     "deploy": "gh-pages -d dist",
     "start": "vite --port 5000",
     "dev": "vite",
+    "sass": "sass src/assets/scss/main.scss:src/assets/css/main.css -w --style=expanded",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
