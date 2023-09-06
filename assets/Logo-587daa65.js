@@ -1,1 +1,0 @@
-import{j as o,L as s}from"./index-e5e4fcf2.js";const l="_logo_qhsul_1",t={logo:l};function g(){return o.jsx(s,{to:"/word-wise",children:o.jsx("img",{src:"/react_deploy_gh/assets/img/logo.png",alt:"WorldWise logo",className:t.logo})})}export{g as L};
