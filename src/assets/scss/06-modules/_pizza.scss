@@ -1,0 +1,11 @@
+@media (max-width: 500px) {
+  .add-to-cart {
+    flex-direction: column;
+    // justify-content: flex-start;
+    align-items: flex-start !important;
+    margin: 1rem 0 !important;
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
