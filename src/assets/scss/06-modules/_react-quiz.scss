@@ -25,7 +25,7 @@
 //     'Helvetica Neue', sans-serif;
 // }
 .m-react-quiz {
-  height: 100vh;
+  min-height: 100vh;
   color: var(--color-light);
   background-color: var(--color-darkest);
   padding: 3.2rem;
@@ -60,15 +60,15 @@
     margin-bottom: 2.4rem;
   }
   .main {
-    width: 50rem;
+    // width: 50rem;
   }
 
   .app-header {
-    width: 50rem;
     margin-bottom: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 3rem;
   }
 
   .error {
@@ -273,3 +273,38 @@
 
 /* ********** */
 /* First counter example */
+
+@media (max-width: 600px) {
+  .app-header {
+    img {
+      width: 6rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .start {
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .app .result {
+    font-size: 1rem;
+  }
+
+  .app .highscore {
+    font-size: 1.3rem;
+  }
+
+  .app .btn-ui {
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+  }
+}
