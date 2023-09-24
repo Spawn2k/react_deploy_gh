@@ -242,31 +242,62 @@ const projekts = [
       },
     ]
   },
-  // {
-  //   title: 'Active - Nav',
-  //   link: 'https://spawn2k.github.io/js-active-link/',
-  //   level: 2,
-  //   react: false,
-  //   date: '09 - 2023',
-  //   description: 'Active Navbar mit schöner Animation leider noch mit kleinen bug',
-  //   icon: (<svg height="1em"
-  //   width="1em" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" >
-  //   <g id="Interface / External_Link">
-  //   <path id="Vector" d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-  //   </g>
-  //   </svg>),
-  //   tags: [
-  //     {
-  //       name: 'onScroll',
-  //       link: 'https://www.youtube.com/watch?v=UoE1hqfpXX0&t=2s&ab_channel=Codehal',
-  //     },
-  //     {
-  //       name: 'Tab animation',
-  //       link: 'https://www.youtube.com/watch?v=h2AOXBeVrgI&ab_channel=KevinPowell',
-  //     },
+  {
+    title: 'Japan',
+    link: 'https://spawn2k.github.io/gh_tokyo/',
+    level: 4,
+    react: false,
+    date: '09 - 2023',
+    description: 'Welcome to Japan 😊. Diesmal ein größeres Projekt mit vielen verscheidenen Elementen. Im header onLoad mit css Keyframes. Position des Bildes kann man mit der Maus auf der X achse verändern. Intersection Observer wurden an manchen Stellen verwendet. Parallel effect sowohl horizontal als auch vertikal. Positionierung von den Elementen wurden Hauptsächlich mit Grid umgesetzt',
+    icon: (<svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M336.375 22.123c.747 27.58 3.127 51.431-1.747 70.892h-20.54c-12.376 22.876-11.185 40.564-2.362 55.333l16.002-8.366c2.867-9.458-28.632-22.734 14.187-27.753 5.796 2.848 20.874 9.41 39.09 17.227 3.817-34.507 26.088-36.795 47.47-45.863l-14.343-29.667c-35.396 14.004-55.536-16.018-77.757-31.803zm4.879 127.87c-11.753 1.278-18.274 7.788-23.853 15.24-5.893 21.864-.11 43.726 1.325 65.59l-37.102 61.617c-21.8 17.135-20.912-.866-23.666-11.705-18.465 18.51-15.916 40.93-24.037 60.733l-68.241 5.963-54.99 45.715 32.795 13.25 6.294-13.913 48.365-19.875 19.215.661 1.986 21.202 14.576 17.227 33.127-29.815-8.613-17.889c16.54-9.194 16.06 3.64 23.19 6.626l16.998-6.808 7.994-14.583 6.718 12.634 13.5-23.52 13.34 13.01 15.654-25.787 13.13-123.6zM190.857 382.877l-11.263 12.258-14.576-1.325-15.405 20.208 14.742 20.868 33.127-18.55 15.9-20.54c-4.955-8.08-11.457-14.096-22.525-12.92zm-77.518 20.208c-10.171 4.3-20.488 7.123-29.813 19.877l24.514 20.538c-9.749 12.92-6.887 25.838-7.62 38.758l16.895 7.62 15.239-11.263c-2.385-18.249 3.108-35.186 11.263-51.68l-6.626-13.25z"></path></svg>),
+    tags: [
+      {
+        name: 'Horizontal Slider',
+        link: 'https://www.youtube.com/watch?v=PkADl0HubMY&t=22s&ab_channel=Hyperplexed',
+      },
+      {
+        name: 'Clip path',
+        link: 'https://www.plantcss.com/',
+      },
+      {
+        name: 'CSS Card Effekt',
+        link: 'https://www.youtube.com/watch?v=M4LkYnhMKIM&ab_channel=UnleashedDesign',
+      },
+      {
+        name: 'CSS Card Effekt',
+        link: 'https://www.youtube.com/watch?v=M4LkYnhMKIM&ab_channel=UnleashedDesign',
+      },
+      {
+        name: 'Intersection Observer API',
+        link: 'https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API',
+      },
+      {
+        name: 'Web Animations API',
+        link: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API',
+      },
      
-  //   ]
-  // },
+    ]
+  },
+  {
+    title: 'Amazing Coffee',
+    link: 'https://spawn2k.github.io/gh_amazing_cafe/',
+    level: 2,
+    react: false,
+    date: '09 - 2023',
+    description: 'Schönes Projekt aus den Webdesign Kurs. Gute Übung für responsive ',
+    icon: (<svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" ><path d="M6 18a6.06 6.06 0 0 0 5.17-6 7.62 7.62 0 0 1 6.52-7.51l2.59-.37c-.07-.08-.13-.16-.21-.24-3.26-3.26-9.52-2.28-14 2.18C2.28 9.9 1 15 2.76 18.46z"></path><path d="M12.73 12a7.63 7.63 0 0 1-6.51 7.52l-2.46.35.15.17c3.26 3.26 9.52 2.29 14-2.17C21.68 14.11 23 9 21.25 5.59l-3.34.48A6.05 6.05 0 0 0 12.73 12z"></path></svg>),
+    tags: [
+      {
+        name: 'Webdesign Kurs',
+        link: '',
+      },
+      {
+        name: 'Responsive',
+        link: '',
+      },
+     
+    ]
+  },
   {
     title: 'Tabs',
     link: 'https://spawn2k.github.io/js-active-link/tab',
@@ -297,8 +328,6 @@ const projekts = [
      
     ]
   },
-
-
 ];
 
 
